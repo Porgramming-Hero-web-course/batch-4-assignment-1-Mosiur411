@@ -1,5 +1,27 @@
 {
-    //
+    //  problem 7 solved
+
+    class Car {
+        make: string;
+        model: string;
+        year: number;
+
+        constructor(make: string, model: string, year: number) {
+            this.make = make;
+            this.model = model;
+            this.year = year;
+        }
+
+        getCarAge(): number {
+            const currentYear = new Date().getFullYear(); // current year
+            return currentYear - this.year; 
+        }
+    }
+
+
+    const car = new Car("Honda", "Civic", 2008);
+    const output = car.getCarAge();
+    console.log(output)
 
     //
 }
